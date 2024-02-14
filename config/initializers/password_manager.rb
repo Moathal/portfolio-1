@@ -1,10 +1,8 @@
-# config/initializers/password_manager.rb
-
 require 'yaml'
-require_relative '../helpers/crypto_helper'
+require_relative "#{Rails.root}/app/incription/crypto_helper"
 
 class PasswordManager
-  PASSWORD_FILE_PATH = "#{Rails.root}/data/projects.yml"
+  PASSWORD_FILE_PATH = "#{Rails.root}/app/data/projects.yml"
 
   def self.ensure_password_exists
     return if password_exists?

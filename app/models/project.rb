@@ -14,7 +14,7 @@ class Project
   end
 
   def self.all
-    projects_data['projects'].map { |attributes| new(attributes) }
+    projects_data['projects'].nil? ? [] : projects_data['projects'].map { |attributes| new(attributes) }
   end
 
   def self.find(index)
@@ -44,10 +44,10 @@ class Project
   end
   
   def self.projects_data
-    YAML.load_file("#{Rails.root}/data/projects.yml") || { 'projects' => [] }
+    YAML.load_file("#{Rails.root}/app/data/projects.yml") || { 'projects' => [] }
   end
 
   def write_to_yaml_file
-    File.open("#{Rails.root}/data/projects.yml", "w") { |file| file.write(projects_data.to_yaml) }
+    File.open("#{Rails.root}/app/data/projects.yml", "w") { |file| file.write(projects_data.to_yaml) }
   end
 end

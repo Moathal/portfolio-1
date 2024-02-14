@@ -55,7 +55,7 @@ class ProjectsController < ApplicationController
       filename = "#{project.name}_#{project.id}_#{photo_type}"
       filepath = Rails.root.join('public', 'portfolioImgs', filename)
       File.open(filepath, 'wb') { |file| file.write(photo.read) }
-      project.update(photo_path: "/uploads/portfolioImgs/#{filename}") # Assuming you have a photo_path attribute in your project YAML data
+      project.update(photo_path: "/uploads/portfolioImgs/#{filename}")
       flash[:success] = 'Photo uploaded successfully.'
     else
       flash[:error] = 'No photo uploaded.'
