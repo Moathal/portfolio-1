@@ -1,0 +1,33 @@
+<div>
+  <ul class="socialMedia flex">
+    <li>
+      <a class="github flex" role="button" href="https://github.com/Moathal/">
+        <img class="comunic" src="icons&imgs/Icon-GitHub.svg" alt="github icon">
+      </a>
+    </li>
+
+    <li>
+      <a class="linkedin flex" role="button" href="https://www.linkedin.com/in/moathalkachi">
+        <img class="comunic" src="icons&imgs/Icon-Linkedin.svg" alt="linkedin icon">
+      </a>
+    </li>
+    <li>
+      <button hx-ext="debug" hx-get="/contact" hx-swap="outerHTML"  hx-trigger="click once" class="footer-button" hx-target="#form-container">Contact me</button>
+    </li>
+
+    <li>
+      <a class="angelist flex" role="button" href="https://angel.co/u/moathal-s-mousa">
+        <img class="comunic" src="icons&imgs/angelist.svg" alt="angelist icon">
+      </a>
+    </li>
+
+    <li>
+      <a class="medium flex" role="button" href="https://medium.com/@moathalkachi">
+        <img class="comunic" src="icons&imgs/Vector.svg" alt="medium icon">
+      </a>
+    </li>
+  </ul>
+</div>
+<div id="form-container">
+  <%= render "layouts/contact" %>
+</div>

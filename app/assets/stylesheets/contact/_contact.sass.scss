@@ -1,0 +1,11 @@
+#form-container {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
+}
+
+#form-container.open {
+  max-height: 80%;
+  /* Adjust this value based on your form's height */
+  transition: max-height 0.5s ease-in;
+}
