@@ -1,0 +1,82 @@
+.btn,
+.btn-two {
+  position: relative;
+  width: 256px;
+  height: 64px;
+  line-height: 64px;
+  transition: all 0.3s;
+  border: none;
+  cursor: pointer;
+}
+
+.btn span,
+.btn-two span {
+  transition: all 0.3s;
+  transform: scale(1, 1);
+}
+
+.btn::before,
+.btn::after,
+.btn-two::before,
+.btn-two::after {
+  content: '';
+  position: absolute;
+  transition: all 0.3s;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.btn-two::before,
+.btn-two::after {
+  border: 1px solid;
+  border-color: hsla(200, 70%, 50%, 0.5);
+  /* Hue color for border */
+}
+
+.btn-two.clicked::before,
+.btn-two.clicked::after {
+  border-color: hsla(150, 70%, 50%, 0.5);
+  /* Hue color for border when clicked */
+}
+
+.btn-two.clicked span {
+  color: hsl(200, 70%, 50%);
+  /* Hue color for font when clicked */
+}
+
+.btn-two.clicked::after {
+  animation: rotatecw 2s infinite linear;
+}
+
+.btn-two.clicked::before {
+  animation: rotateccw 3s infinite linear;
+}
+
+.btn-two.clicked::after,
+.btn-two.clicked::before {
+  left: 96px;
+  width: 64px;
+}
+
+@keyframes rotatecw {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateccw {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(-360deg);
+  }
+}

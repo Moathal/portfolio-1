@@ -11,8 +11,13 @@
         <img class="comunic" src="icons&imgs/Icon-Linkedin.svg" alt="linkedin icon">
       </a>
     </li>
-    <li>
-      <button hx-ext="debug" hx-get="/contact" hx-swap="outerHTML"  hx-trigger="click once" class="footer-button" hx-target="#form-container">Contact me</button>
+    <li >
+      <button hx-ext="class-tools"
+      hx-on:click="htmx.toggleClass('#form-container', 'open'); htmx.toggleClass('#footer', 'open')"
+      classes="toggle clicked:click"
+      class="btn btn-two">
+      <span>Contact me</span>
+      </button>
     </li>
 
     <li>
@@ -28,6 +33,6 @@
     </li>
   </ul>
 </div>
-<div id="form-container">
+<div id="form-container" class="form-container">
   <%= render "layouts/contact" %>
 </div>

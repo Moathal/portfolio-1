@@ -1,0 +1,3 @@
+//= require htmx
+
+//= require htmx
