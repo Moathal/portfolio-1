@@ -12,10 +12,10 @@
       </a>
     </li>
     <li >
-      <button hx-ext="class-tools"
-      hx-on:click="htmx.toggleClass('#form-container', 'open'); htmx.toggleClass('#footer', 'open')"
-      classes="toggle clicked:click"
-      class="btn btn-two">
+      <button hx-on:click="htmx.toggleClass('#form-container', 'open'); 
+                          htmx.toggleClass('#footer', 'open'); 
+                          htmx.toggleClass('.btn.btn-two', 'clicked')"
+              class="btn btn-two">
       <span>Contact me</span>
       </button>
     </li>
