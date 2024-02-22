@@ -1,82 +1,65 @@
-.btn,
-.btn-two {
+.btn {
   position: relative;
-  width: 256px;
-  height: 64px;
-  line-height: 64px;
-  transition: all 0.3s;
-  border: none;
+  width: 80px;
+  height: 120px;
+  background: linear-gradient(45deg, #2C3E50, #34495E);
+  /* Dark balloon gradient colors */
+  border-radius: 50% 50% 60% 60% / 60% 60% 50% 50%;
   cursor: pointer;
+  animation: bounce 1s infinite alternate;
+  /* Bouncing animation */
+  border: none;
+  /* Remove border */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  /* Add shadow for 3D effect */
 }
 
-.btn span,
-.btn-two span {
-  transition: all 0.3s;
-  transform: scale(1, 1);
-}
-
-.btn::before,
-.btn::after,
-.btn-two::before,
-.btn-two::after {
-  content: '';
+.btn::before {
+  content: "";
   position: absolute;
-  transition: all 0.3s;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 15px 10px 0;
+  border-color: #2C3E50 transparent transparent;
+  /* Dark balloon tip color */
+  left: 50%;
+  bottom: -15px;
+  transform: translateX(-50%);
 }
 
-.btn-two::before,
-.btn-two::after {
-  border: 1px solid;
-  border-color: hsla(200, 70%, 50%, 0.5);
-  /* Hue color for border */
+.btn:hover {
+  animation-play-state: paused;
+  /* Pause bouncing animation on hover */
 }
 
-.btn-two.clicked::before,
-.btn-two.clicked::after {
-  border-color: hsla(150, 70%, 50%, 0.5);
-  /* Hue color for border when clicked */
+.clicked {
+  animation-play-state: running;
+  /* Continue bouncing animation on click */
+  animation: flip 0.5s forwards;
+  /* Flipping animation on click */
 }
 
-.btn-two.clicked span {
-  color: hsl(200, 70%, 50%);
-  /* Hue color for font when clicked */
-}
-
-.btn-two.clicked::after {
-  animation: rotatecw 2s infinite linear;
-}
-
-.btn-two.clicked::before {
-  animation: rotateccw 3s infinite linear;
-}
-
-.btn-two.clicked::after,
-.btn-two.clicked::before {
-  left: 96px;
-  width: 64px;
-}
-
-@keyframes rotatecw {
-  from {
-    transform: rotate(0deg);
+@keyframes bounce {
+  0% {
+    bottom: 0;
+    width: 80px;
+    /* Initial width */
   }
 
-  to {
-    transform: rotate(360deg);
+  100% {
+    bottom: 10px;
+    width: 100px;
+    /* Width when the balloon is fully compressed */
   }
 }
 
-@keyframes rotateccw {
-  from {
-    transform: rotate(0deg);
+@keyframes flip {
+  0% {
+    transform: rotateY(0);
   }
 
-  to {
-    transform: rotate(-360deg);
+  100% {
+    transform: rotateY(180deg);
   }
 }
