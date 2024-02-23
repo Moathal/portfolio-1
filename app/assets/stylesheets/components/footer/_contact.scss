@@ -1,0 +1,55 @@
+form {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 3%;
+  justify-content: center;
+  align-items: center;
+}
+
+.field1 {
+  min-width: 295px;
+  height: 16px;
+  text-align: left;
+  color: #000;
+  padding: 16px;
+}
+
+.field2 {
+  min-width: 295px;
+  height: 12px;
+  text-align: left;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  color: #191765;
+  padding: 16px;
+}
+
+.field3 {
+  min-width: 303px;
+  min-height: 124px;
+  resize: none;
+  text-align: left;
+  padding: 12px;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  color: #000;
+}
+
+form>input:valid {
+  border: 2px solid rgba(24, 148, 24, 0.897);
+}
+
+form>input:focus {
+  border: 2px solid #2a2943;
+}
+
+form>input:invalid {
+  border: 2px solid rgba(152, 85, 85, 0.753);
+}

@@ -1,9 +1,19 @@
-@import "./contact/contact";
-@import "./contact/contactToggler";
+// Styling components:-
 
-html, body {
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
+//1- Config
+
+@import "./config/config";
+
+//2- main and nav:-
+@import "./components/main/HtmlBody";
+@import "./components/main/nav";
+@import "./components/main/main";
+
+// projects and their container
+@import "./components/projects/container";
+@import "./components/projects/card";
+
+//4- Footer and the form for contact me:-
+@import "./components/footer/footer";
+@import "./components/footer/contact";
+@import "./components/footer/contactToggler";

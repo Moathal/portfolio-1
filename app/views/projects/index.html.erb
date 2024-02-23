@@ -1,0 +1,17 @@
+<main>
+  <nav>
+    <ul>
+      <li hx-get="./projects" 
+          hx-swap="outerHTML"
+          hx-target="#projects"
+          hx-trigger="click" 
+          id="all" data-hx-vals="<%= projects.to_json %>" data-controller="projectsNav" data-action="switch">
+          All projects
+      </li>
+      <li>Front-end</li>
+      <li>Back-end</li>
+      <li>Full-stack</li>
+  </ul>
+</nav>
+  <section id='projects'></section>
+</main>

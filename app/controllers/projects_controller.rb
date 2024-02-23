@@ -1,6 +1,9 @@
 class ProjectsController < ApplicationController
   def index
     @projects = Project.all
+    @frontend_projects = @projects.select { |project| project['project_type'] == 'frontend' }
+    @fullstack_projects = @projects.select { |project| project['project_type'] == 'Full-stack' }
+    @backend_projects = @projects.select { |project| project['project_type'] == 'backend' }
   end
 
   def show
