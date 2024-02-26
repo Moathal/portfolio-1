@@ -1,2 +1,213 @@
 ---
-password: wAhXsevE1Qk6uOyAqJah0cYtFoKlW1FWngFU84kISmE=
+password: "wAhXsevE1Qk6uOyAqJah0cYtFoKlW1FWngFU84kISmE="
+
+projects: 
+  - id: 1
+    title: "SleepOver API"
+    image: "icons&imgs/WhatsAppImage2023-02-02at7.17.00PM.webp"
+    imageMin: "icons&imgs/WhatsAppImage2023-02-02at7.17.00PM.webp"
+    description: "Sleepover is an App developed using React for Front-End and Ruby on Rails for Back-End as two separated repositories by making API backend."
+    descriptionMin: "Sleepover is an App developed using React for Front-End and Ruby on Rails for Back-End as two separated repositories."
+    toolslist:
+      - "Ruby"
+      - "pgsql"
+      - "rails"
+    liveLink: "None"
+    sourceLink: "https://github.com/Moathal/hotel-room-reservation"
+    type: "back-end"
+
+  - id: 2
+    title: "Catalog of my things"
+    image: "icons&imgs/Screenshot2023-03-24144009.webp"
+    imageMin: "icons&imgs/Screenshot2023-03-24144009.webp"
+    description: "Catalog of my things is a project that uses console app to keep a record of different types of things you own: books, music albums, movies, and games. built using only Object oriented programming."
+    descriptionMin: "Catalog of my things is a project that uses console app to keep a record of different types of things you own: books, music albums, movies, and games. built using only Object oriented programming."
+    toolslist:
+      - "Ruby"
+      - "pgsql"
+    liveLink: "None"
+    sourceLink: "https://github.com/Moathal/Catalog-of-my-things"
+    type: "back-end"
+
+  - id: 3
+    title: "School Library"
+    image: "icons&imgs/Screenshot2023-03-24141702.webp"
+    imageMin: "icons&imgs/Screenshot2023-03-24141702.webp"
+    description: "Imagine that you are the librarian of OOP University, and you need a tool to record what books are in the library and who borrows them. In terminal, this app will allow you to Add new students or teachers. Add new books. Save records of who borrowed a given book and when."
+    descriptionMin: "Imagine that you are the librarian of OOP University, and you need a tool to record what books are in the library and who borrows them in terminal."
+    toolslist:
+      - "Ruby"
+      - "pgsql"
+    liveLink: "None"
+    sourceLink: "https://github.com/Moathal/School-library"
+    type: "back-end"
+
+  - id: 4
+    title: "Blog App"
+    image: "icons&imgs/1678895682781.webp"
+    imageMin: "icons&imgs/1678895682781.webp"
+    description: "Blog app is a classic example of a blog website. I created a fully functional website that shows the list of posts and empower readers to interact with them by adding comments and liking posts."
+    descriptionMin: "is a classic example of a blog website. I creates a fully functional website that shows the list of posts and empower readers to interact with them by adding comments and liking posts."
+    toolslist:
+      - "css"
+      - "html"
+      - "bootstrap"
+      - "Ruby"
+      - "rails"
+    liveLink: "https://blogapp-ggjm.onrender.com/"
+    sourceLink: "https://github.com/Moathal/blog"
+    type: "full-stack"
+
+  - id: 5
+    title: "Private Event"
+    image: "icons&imgs/2023-12-04201257.webp"
+    imageMin: "icons&imgs/2023-12-04200639.webp"
+    description: "A site lets user create events private or public, and attend events. An event can be attended by many users, and take place at specific location, date and time. All pages are real time updated and all uses are notified thanks to noticed and hotrails gems. Tried to use as much association case in the database as possible to push active record to its peak. Used sass, Bootstrap and stimulus for styling and responsiveness all embedded in webpack."
+    descriptionMin: "a site similar to a private Eventbrite which allows users to create events and then manage user signups."
+    toolslist:
+      - "css"
+      - "html"
+      - "bootstrap"
+      - "Ruby"
+      - "rails"
+      - "redis"
+    liveLink: "None"
+    sourceLink: "https://github.com/Moathal/private-event"
+    type: "full-stack"
+
+  - id: 6
+    title: "Recipe App"
+    image: "icons&imgs/2023-12-04165957.webp"
+    imageMin: "icons&imgs/2023-12-04170057.webp"
+    description: "Recipe app keeps track of all your recipes, ingredients, and inventory. It will allow you to save ingredients, keep track of what you have, create recipes, and generate a shopping list based on what you have and what you are missing from a recipe."
+    descriptionMin: "Recipe app keeps track of all your recipes, ingredients, and inventory. It will allow you to save ingredients, keep track of what you have, create recipes, and generate a shopping list based on what you have and what you are missing from a recipe."
+    toolslist:
+      - "css"
+      - "html"
+      - "tailwind"
+      - "Ruby"
+      - "rails"
+    liveLink: "None"
+    sourceLink: "https://github.com/edi-sipka/Recipe_app"
+    type: "full-stack"
+
+  - id: 7
+    title: "Budget App"
+    image: "icons&imgs/1677927830202.webp"
+    imageMin: "icons&imgs/mobile1677927830202.webp"
+    description: "A mobile web application where you can manage your budget: you have a list of transactions associated with a category, so that you can see how much money you spent and on what."
+    descriptionMin: "A mobile web application where you can manage your budget: you have a list of transactions associated with a category, so that you can see how much money you spent and on what."
+    toolslist:
+      - "css"
+      - "html"
+      - "bootstrap"
+      - "Ruby"
+      - "rails"
+    liveLink: "https://budgetappmoathal.onrender.com"
+    sourceLink: "https://github.com/Moathal/Budget-app"
+    type: "full-stack"
+
+  - id: 8
+    title: "Middle East Weather"
+    image: "icons&imgs/Screenshot2023-02-24215705.webp"
+    imageMin: "icons&imgs/mobileScreenshot2023-02-24215705.webp"
+    description: "It is a mobile webapp that shows the weather in time in some countries in middle east. Made using React redux."
+    descriptionMin: "This project lists some Middle eastern countries with their time weather."
+    toolslist:
+      - "css"
+      - "bootstrap"
+      - "React"
+      - "Redux"
+    liveLink: "https://634e92fdfb2d5a612a53cefe--adorable-gumption-bc705f.netlify.app"
+    sourceLink: "https://github.com/Moathal/MiddleEastWeather"
+    type: "front-end"
+
+  - id: 9
+    title: "Dynasty Entertainment"
+    image: "icons&imgs/1677246225145.webp"
+    imageMin: "icons&imgs/mobile1677246225145.webp"
+    description: "It is project for rating TV shows and add comments on them. It is responsive and saves data in a Host API the TV series added a 30 anime."
+    descriptionMin: "It is project for rating TV shows and add comments on them. It is responsive and saves data in a Host API the TV series added a 30 anime."
+    toolslist:
+      - "css"
+      - "html"
+      - "bootstrap"
+      - "JS"
+      - "Webpack"
+    liveLink: "https://moathal.github.io/Dynasty-Entertainment/dist"
+    sourceLink: "https://github.com/Moathal/Dynasty-Entertainment"
+    type: "front-end"
+
+  - id: 10
+    title: "Todo List"
+    image: "icons&imgs/Screenshot2023-02-24150747.webp"
+    imageMin: "icons&imgs/mobileScreenshot2023-02-24150747.webp"
+    description: "Simple to do list that adds removes and moves multiple tasks. It is made using webpack and vanilla JS and connected to storage API to store delete or update tasks."
+    descriptionMin: "This website is one of Microverse projects. It is an all free website made to help people in adding deleting or editing their daily tasks."
+    toolslist:
+      - "css"
+      - "html"
+      - "bootstrap"
+      - "JS"
+      - "Webpack"
+    liveLink: "https://moathal.github.io/Todo-List"
+    sourceLink: "https://github.com/Moathal/Todo-List"
+    type: "front-end"
+
+  - id: 11
+    title: "Awesome Books"
+    image: "icons&imgs/Screenshot2023-02-24161736.webp"
+    imageMin: "icons&imgs/mobileScreenshot2023-02-24161736.webp"
+    description: "This project lists some Awesome books and you can add you favorite to it. It is a single page application. Its also consist of a clock implemented without a library."
+    descriptionMin: "This project lists some Awesome books and you can add you favorite to it. It is a single page application."
+    toolslist:
+      - "css"
+      - "html"
+      - "bootstrap"
+      - "JS"
+    liveLink: "https://moathal.github.io/Awesome-books/"
+    sourceLink: "https://github.com/Moathal/Awesome-books"
+    type: "front-end"
+
+  - id: 12
+    title: "Fast Learn"
+    image: "icons&imgs/1660916560236.webp"
+    imageMin: "icons&imgs/mobilefastlearn.webp"
+    description: "This website is one of Microverse projects personalized by myself to make it a guidance for learning web development even if users have no experience. It is an all free website made to help students in finding the right skills required in jobs market of fullstack web development. The courses are available free on the web and our job is to SUBJECTIVELY choose the best. The courses chosen are The Odin Project and CS50 feel free to google them and get to build an opinion about them."
+    descriptionMin: "This website is one of Microverse projects personalized by myself to make it a guidance for learning web development even if users have no experience at all. All they need is dedication and time."
+    toolslist:
+      - "css"
+      - "html"
+      - "bootstrap"
+      - "JS"
+    liveLink: "https://Moathal.github.io/Fast-Learn"
+    sourceLink: "https://github.com/Moathal/Fast-Learn"
+    type: "front-end"
+
+  - id: 13
+    title: "JS Scientific Calculator"
+    image: "icons&imgs/Screenshot2023-02-23105640.webp"
+    imageMin: "icons&imgs/mobileScreenshot2023-02-23105640.webp"
+    description: "This website is one of Odin Project Assignment mainly focuses on JS, but CSS and HTML is also essential in it. This calculator dose not use any library yet it is semi fully functional scientific calculator except for big numbers"
+    descriptionMin: "Odin Project Assignment mainly focuses on JS, but CSS and HTML is also essential in it."
+    toolslist:
+      - "css"
+      - "html"
+      - "JS"
+    liveLink: "https://moathal.github.io/Calculater"
+    sourceLink: "https://github.com/Moathal/Calculater"
+    type: "front-end"
+
+  - id: 14
+    title: "Drawing Board"
+    image: "icons&imgs/Screenshot2023-02-23133150.webp"
+    imageMin: "icons&imgs/Screenshot2023-02-23133150.webp"
+    description: "Odin Project Assignment based on Etch A Sketch mainly focuses on JS, CSS and HTML. Yet some other features were added to enhance the experience, like coloring erasing ad other colors choose the number of pixels on the board. It works only on PCs"
+    descriptionMin: "Odin Project Assignment based on Etch A Sketch mainly focuses on JS, CSS and HTML. Yet some other features were added to enhance the experience. It works only on PCs"
+    toolslist:
+      - "css"
+      - "html"
+      - "JS"
+    liveLink: "https://moathal.github.io/itch-a-scetch"
+    sourceLink: "https://github.com/Moathal/itch-a-scetch"
+    type: "front-end"

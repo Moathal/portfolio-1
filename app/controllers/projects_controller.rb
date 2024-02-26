@@ -1,10 +1,11 @@
 class ProjectsController < ApplicationController
   def index
     @projects = Project.all
-    @frontend_projects = @projects.select { |project| project['project_type'] == 'frontend' }
-    @fullstack_projects = @projects.select { |project| project['project_type'] == 'Full-stack' }
-    @backend_projects = @projects.select { |project| project['project_type'] == 'backend' }
+    @frontend_projects = @projects.select { |project| project.type == 'front-end' }
+    @fullstack_projects = @projects.select { |project| project.type == 'full-stack' }
+    @backend_projects = @projects.select { |project| project.type == 'back-end' }
   end
+
 
   def show
     @project = Project.find(params[:id])
@@ -56,9 +57,9 @@ class ProjectsController < ApplicationController
     photo_type = params[:photo_type]
     if photo
       filename = "#{project.name}_#{project.id}_#{photo_type}"
-      filepath = Rails.root.join('public', 'portfolioImgs', filename)
+      filepath = Rails.root.join('public', 'icons&Imgs', filename)
       File.open(filepath, 'wb') { |file| file.write(photo.read) }
-      project.update(photo_path: "/uploads/portfolioImgs/#{filename}")
+      project.update(photo_path: "/uploads/icons&Imgs/#{filename}")
       flash[:success] = 'Photo uploaded successfully.'
     else
       flash[:error] = 'No photo uploaded.'
@@ -70,6 +71,6 @@ class ProjectsController < ApplicationController
   private
 
   def project_params
-    params.require(:project).permit(:project_name, :project_type, :tech_stack, :description, :mobile_view_img, :desktop_view_img, :link_to_github, :link_to_live_preview)
+    params.require(:project).permit(:title, :type, :toolslist, :description, :descriptionMin, :image, :imageMin, :sourceLink, :liveLink)
   end
 end

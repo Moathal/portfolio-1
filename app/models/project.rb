@@ -1,10 +1,18 @@
 require 'securerandom'
 
 class Project
-  attr_reader :attributes
+  ATTRIBUTES = [:id, :title, :image, :imageMin, :description, :descriptionMin, :toolslist, :liveLink, :sourceLink, :type]
+
+  ATTRIBUTES.each do |attr|
+    define_method(attr) do
+      instance_variable_get("@#{attr}")
+    end
+  end
 
   def initialize(attributes = {})
-    @attributes = attributes
+    ATTRIBUTES.each do |attr|
+      instance_variable_set("@#{attr}", attributes[attr.to_s])
+    end
   end
   
   def self.create(attributes = {})
@@ -28,7 +36,9 @@ class Project
   end
 
   def update(attributes)
-    @attributes.merge!(attributes)
+    ATTRIBUTES.each do |attr|
+      instance_variable_set("@#{attr}", attributes[attr.to_s])
+    end
     write_to_yaml_file
   end
 

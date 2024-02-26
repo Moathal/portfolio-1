@@ -1,11 +1,9 @@
 <main>
   <nav>
     <ul>
-      <li hx-get="./projects" 
-          hx-swap="outerHTML"
-          hx-target="#projects"
+      <li hx-target="#projects"
           hx-trigger="click" 
-          id="all" data-hx-vals="<%= projects.to_json %>" data-controller="projectsNav" data-action="switch">
+          id="all" data-hx-vals="<%= @projects.to_json %>" data-controller="projects-nav" data-action="mouseup->projects-nav#switch" class="projectsNav selected">
           All projects
       </li>
       <li>Front-end</li>

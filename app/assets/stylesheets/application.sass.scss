@@ -5,11 +5,9 @@
 @import "./config/config";
 
 //2- main and nav:-
-@import "./components/main/HtmlBody";
 @import "./components/main/nav";
-@import "./components/main/main";
 
-// projects and their container
+//3- projects and their container
 @import "./components/projects/container";
 @import "./components/projects/card";
 
