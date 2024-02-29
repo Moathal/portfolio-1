@@ -2,84 +2,114 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 10vmin;
+  margin: 10vmin, 1vmin, 12vmin, 1vmin;
   overflow: hidden;
   flex-wrap: wrap;
-  padding: 5%;
-  gap: 5%;
-}
+  padding: 2%;
+  gap: 2%;
 
-.card {
-  flex: 1;
-  transition: flex-grow 0.5s ease-in-out, height 0.25s ease-in-out;
-  height: 35vmin;
-  min-width: 35vmin;
-  position: relative;
-  transform: skew(5deg);
-  padding: 1em;
+  .card {
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+    grid-template-rows: 90% 10%;
+    transition: flex-grow 0.5s ease-in-out, height 0.25s ease-in-out;
+    height: 35vmin;
+    width: 30vw;
+    // position: relative;
+    transform: skew(5deg);
+    padding: 1em;
+    cursor: pointer;
+    
 
-  .card__head {
-    color: black;
-    background: rgba(255, 30, 173, 0.75);
-    padding: 0.5em;
-    transform: rotate(-90deg);
-    transform-origin: 0% 0%;
-    transition: all 0.5s ease-in-out;
-    min-width: 100%;
-    text-align: center;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    font-size: 1em;
-    white-space: nowrap;
-    width: 35vmin;
-    z-index: 1;
-    /* Ensure it's above the description */
-  }
+    .card__head {
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: space-between;
+      flex-wrap: nowrap;
+      background-color: rgba(255, 30, 173, 0.75);
+      // transform: rotate(-90deg);
+      // transform-origin: 0% 0%;
+      padding: 0.5em;
+      width: 8%;
+      height: 80%;
+      white-space: nowrap;
+      z-index: 1;
 
-  .description {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 35vmin;
-    /* Same as image height */
-    background: rgba(0, 0, 0, 0.5);
-    padding: 0.5em;
-    font-size: 1em;
-    color: white;
-    transform: translateY(100%);
-    transition: transform 0.5s ease-in-out;
-  }
+      h4 {
+        max-height: 11px;
+        color: rgb(3, 0, 84);
+        text-align: center;
+        font-size: 1em;
+        margin: 0 !important;
+        writing-mode: vertical-rl;
+        transform: rotate(180deg);
+        transform-origin: 50% 100%;
+      }
 
-  &:hover:not(.active) {
-    img {
-      filter: grayscale(0);
-    }
-  }
-
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: filter 0.2s ease-in-out;
-    filter: grayscale(100%);
-  }
-
-  &:not(:nth-child(5)) {
-    margin: 1em;
-  }
-
-  &.active {
-    flex-grow: 10;
-    height: 75vmin;
-    min-width: 100vmin;
-
-    img {
-      filter: grayscale(0);
+      .viewToggler {
+        max-height: 32px;
+        border-radius: 30%;
+        object-fit: contain;
+        cursor: pointer;
+      }
     }
 
     .description {
-      transform: translateY(0%);
+      transition: all 0.5s ease-in-out;
+      transform: rotate(-90deg);
+      transform-origin: 0% 0%;
+      visibility: hidden;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 0.5em;
+      font-size: 1em;
+      color: white;
+      transform: translateY(100%);
+      transition: transform 0.5s ease-in-out;
+    }
+
+    &:hover:not(.active) {
+      .ProjectIMG {
+        filter: grayscale(0);
+      }
+    }
+
+    .ProjectIMG {
+      max-width: 75%;
+      // height: 100%;
+      object-fit: cover;
+      transition: filter 0.2s ease-in-out;
+      filter: grayscale(100%);
+    }
+
+    &:not(:nth-child(5)) {
+      margin: 1em;
+    }
+
+    &.active {
+      flex-grow: 10;
+      height: 75vmin;
+      min-width: 100vmin;
+      margin: 5%;
+      transform: skew(-5deg);
+      transition: transform 0.5s ease-in-out;
+
+      .card__head {
+        width: 60vh;
+      }
+
+      .ProjectIMG {
+        object-fit: contain;
+        filter: grayscale(0);
+      }
+
+      .description {
+        visibility: visible;
+        transform: translateY(0%);
+        transition: transform 0.5s ease-in-out;
+      }
     }
   }
 }

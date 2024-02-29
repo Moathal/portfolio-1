@@ -1,17 +1,13 @@
 .btn {
   position: relative;
-  width: 80px;
-  height: 120px;
-  background: linear-gradient(45deg, #2C3E50, #34495E);
-  /* Dark balloon gradient colors */
+  width: 95px;
+  height: 100px;
+  background: linear-gradient(35deg, #114274, #25384b);
   border-radius: 50% 50% 60% 60% / 60% 60% 50% 50%;
   cursor: pointer;
-  animation: bounce 1s infinite alternate;
-  /* Bouncing animation */
+  animation: bounce 0.7s infinite alternate;
   border: none;
-  /* Remove border */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  /* Add shadow for 3D effect */
 }
 
 .btn::before {
@@ -22,22 +18,39 @@
   border-style: solid;
   border-width: 15px 10px 0;
   border-color: #2C3E50 transparent transparent;
-  /* Dark balloon tip color */
   left: 50%;
   bottom: -15px;
   transform: translateX(-50%);
+
 }
 
 .btn:hover {
   animation-play-state: paused;
-  /* Pause bouncing animation on hover */
 }
+
+.close {
+  display: none;
+}
+
+.contact-me {
+  display: inline;
+  color: antiquewhite;
+}
+
 
 .clicked {
   animation-play-state: running;
-  /* Continue bouncing animation on click */
   animation: flip 0.5s forwards;
-  /* Flipping animation on click */
+  
+  .contact-me {
+    color: antiquewhite;
+    display: none;
+  }
+
+  .close {
+    display: inline;
+    color: antiquewhite;
+  }
 }
 
 @keyframes bounce {
@@ -50,7 +63,6 @@
   100% {
     bottom: 10px;
     width: 100px;
-    /* Width when the balloon is fully compressed */
   }
 }
 
@@ -60,6 +72,6 @@
   }
 
   100% {
-    transform: rotateY(180deg);
+    transform: rotateY(360deg);
   }
 }

@@ -27,12 +27,16 @@ export default class extends Controller {
 
   projectsList = (projects) => {
     const projectsHtmlList = projects.map(project => {
-      return `<div hx-on:click="htmx.toggleClass('#${project.id}-card', 'active')" id="${project.id}-card" class="card">
-        <img src="${project.image}">
-          <div class="card__head">${project.title}</div>
+			return `
+      <div hx-on:click="htmx.toggleClass('#${project.id}-card', 'active')" id="${project.id}-card" class="card">
+      <div class="card__head"><h4>${project.title}</h4> <img class="viewToggler" src="icons&imgs/ProjectMobileView.svg"></img></div>
+      <div class="2ndcolumn">
+      <ul>${this.techStackList(project)}</ul>
+        <img class="ProjectIMG" src="${project.image}">
+      </div>
           <div class="description">${project.description}</div>
       </div>`;
-    }).join('');
+		}).join('');
     return projectsHtmlList;
   }
   
