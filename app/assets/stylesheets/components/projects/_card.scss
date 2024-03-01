@@ -10,43 +10,39 @@
 
   .card {
     display: grid;
-    grid-template-columns: 10% 80% 10%;
-    grid-template-rows: 90% 10%;
+    grid-template-columns: 5% 90% 5%;
     transition: flex-grow 0.5s ease-in-out, height 0.25s ease-in-out;
-    height: 35vmin;
-    width: 30vw;
-    // position: relative;
+    max-height: 50%;
+    max-width: 30vw;
     transform: skew(5deg);
     padding: 1em;
     cursor: pointer;
     
 
     .card__head {
+      margin-top: auto;
       display: flex;
       flex-direction: column-reverse;
       justify-content: space-between;
       flex-wrap: nowrap;
       background-color: rgba(255, 30, 173, 0.75);
-      // transform: rotate(-90deg);
-      // transform-origin: 0% 0%;
-      padding: 0.5em;
-      width: 8%;
+      padding-bottom: 0.1em;
       height: 80%;
       white-space: nowrap;
-      z-index: 1;
+      margin-bottom: auto;
+      gap: 0.5%;
 
       h4 {
-        max-height: 11px;
-        color: rgb(3, 0, 84);
-        text-align: center;
+        max-height: 50%;
+        // font-family: sans-serif;
+        text-align: start;
         font-size: 1em;
-        margin: 0 !important;
-        writing-mode: vertical-rl;
+        writing-mode: vertical-lr;
         transform: rotate(180deg);
-        transform-origin: 50% 100%;
       }
 
       .viewToggler {
+        background-color:rgb(3, 0, 84);
         max-height: 32px;
         border-radius: 30%;
         object-fit: contain;
@@ -54,17 +50,21 @@
       }
     }
 
+    .projectSpec {
+      display: flex;
+      flex-direction: column;
+    }
+
     .description {
       transition: all 0.5s ease-in-out;
       transform: rotate(-90deg);
       transform-origin: 0% 0%;
       visibility: hidden;
-      bottom: 0;
-      left: 0;
+      height: 0;
       width: 100%;
       background: rgba(0, 0, 0, 0.5);
       padding: 0.5em;
-      font-size: 1em;
+      font-size: 16px;
       color: white;
       transform: translateY(100%);
       transition: transform 0.5s ease-in-out;
@@ -76,9 +76,22 @@
       }
     }
 
+    .tech-stack {
+      display: flex;
+      max-height: 10%;
+      gap: 1%;
+    
+      li {
+        max-width: 20%;
+
+        img {
+          max-height: 32px;
+        }
+      }
+    }
+
     .ProjectIMG {
       max-width: 75%;
-      // height: 100%;
       object-fit: cover;
       transition: filter 0.2s ease-in-out;
       filter: grayscale(100%);
@@ -97,7 +110,7 @@
       transition: transform 0.5s ease-in-out;
 
       .card__head {
-        width: 60vh;
+        margin-top: 0;
       }
 
       .ProjectIMG {
@@ -107,6 +120,7 @@
 
       .description {
         visibility: visible;
+        height: auto;
         transform: translateY(0%);
         transition: transform 0.5s ease-in-out;
       }

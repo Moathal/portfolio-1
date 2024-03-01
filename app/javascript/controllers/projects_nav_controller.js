@@ -28,13 +28,18 @@ export default class extends Controller {
   projectsList = (projects) => {
     const projectsHtmlList = projects.map(project => {
 			return `
-      <div hx-on:click="htmx.toggleClass('#${project.id}-card', 'active')" id="${project.id}-card" class="card">
-      <div class="card__head"><h4>${project.title}</h4> <img class="viewToggler" src="icons&imgs/ProjectMobileView.svg"></img></div>
-      <div class="2ndcolumn">
-      <ul>${this.techStackList(project)}</ul>
+      <div hx-on:click="htmx.toggleClass('#${
+				project.id
+			}-card', 'active')" id="${project.id}-card" class="card">
+      <div class="card__head"><h4>${
+				project.title
+			}</h4> <img class="viewToggler" src="icons&imgs/ProjectMobileView.svg"></img></div>
+      <div class="projectSpec">
+      <ul class="tech-stack">${this.techStackList(project)}</ul>
         <img class="ProjectIMG" src="${project.image}">
+        <div class="description">${project.description}</div>
       </div>
-          <div class="description">${project.description}</div>
+      <div class="project-actions"><button>1</button><button>2</button><button>3</button></div>
       </div>`;
 		}).join('');
     return projectsHtmlList;
@@ -42,7 +47,7 @@ export default class extends Controller {
   
   techStackList = (project) => {
     const tecklist = project.toolslist
-			.map((tool) => `<li>${tool}</li>`)
+			.map((tool) => `<li><img src="icons&imgs/${tool}.webp"></img></li>`)
 			.join("");
     console.log('toolslist:', tecklist);
     return tecklist;
