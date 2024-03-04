@@ -2,7 +2,7 @@
   position: relative;
   width: 95px;
   height: 100px;
-  background: linear-gradient(35deg, #114274, #25384b);
+  background: linear-gradient(35deg, rgba(255, 30, 173, 0.786), rgba(251, 139, 210, 0.844));
   border-radius: 50% 50% 60% 60% / 60% 60% 50% 50%;
   cursor: pointer;
   animation: bounce 0.7s infinite alternate;
@@ -17,7 +17,7 @@
   height: 0;
   border-style: solid;
   border-width: 15px 10px 0;
-  border-color: #2C3E50 transparent transparent;
+  border-color: #ff0095b3 transparent transparent;
   left: 50%;
   bottom: -15px;
   transform: translateX(-50%);

@@ -21,28 +21,47 @@ export default class extends Controller {
     let sect = document.querySelector('#projects');
     let projects = JSON.parse(nav_bttn.getAttribute('data-hx-vals'));
     console.log('Hi this is your object:', projects);
-    sect.innerHTML = `<div class="container">${this.projectsList(projects)}</div>`
-
+    sect.innerHTML = `<div class="container"><div class="cancelling-bg"></div>
+      ${this.projectsList(projects)}
+    </div>`;
+      htmx.process(sect);
   }
 
   projectsList = (projects) => {
     const projectsHtmlList = projects.map(project => {
-			return `
-      <div hx-on:click="htmx.toggleClass('#${
-				project.id
-			}-card', 'active')" id="${project.id}-card" class="card">
-      <div class="card__head"><h4>${
-				project.title
-			}</h4> <img class="viewToggler" src="icons&imgs/ProjectMobileView.svg"></img></div>
+      const card = document.createElement("div");
+			card.id = `card-${project.id}`;
+			card.className = "card";
+			card.setAttribute(
+				"hx-on:click",
+				`htmx.toggleClass('#card-${project.id}', 'active'); 
+        htmx.toggleClass('.cancelling-bg', 'active')`
+			);
+      card.innerHTML = this.cardElements(project);
+			
+      return card.outerHTML;
+      }).join('');
+    return projectsHtmlList;
+  }
+
+  cardElements = (project) => {
+    return `
+      <div class="card__head"><h4>${project.title}</h4></div>
       <div class="projectSpec">
       <ul class="tech-stack">${this.techStackList(project)}</ul>
         <img class="ProjectIMG" src="${project.image}">
         <div class="description">${project.description}</div>
       </div>
-      <div class="project-actions"><button>1</button><button>2</button><button>3</button></div>
+      <div class="project-actions">
+        <div>
+        <a></a>
+        <a><img class="viewToggler" src="icons&imgs/ProjectMobileView.svg"><a>
+        </div>
+        <div>
+          <a>2</a>
+          <a>3</a>
+        </div>
       </div>`;
-		}).join('');
-    return projectsHtmlList;
   }
   
   techStackList = (project) => {
