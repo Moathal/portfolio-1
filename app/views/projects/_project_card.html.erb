@@ -1,0 +1,29 @@
+<div
+	class="card"
+	id="card-<%= project.id %>"
+	hx-on:click="htmx.toggleClass('#card-<%= project.id %>', 'active'); htmx.toggleClass('.cancelling-bg', 'active')">
+	<div class="card__head"><h4><%= project.title %></h4></div>
+	<div class="projectSpec">
+		<ul class="tech-stack">
+			<%= render 'projects/project_tools', toolslist: project.toolslist %>
+		</ul>
+		<img id="img-<%= project.id %>" class="ProjectIMG" src="<%= project.image %>" />
+		<div class="description"><%= project.description %></div>
+	</div>
+	<div class="project-actions">
+		<a
+			id="cardFlip<%= project.id %>"
+			class="projectViewToggler"
+			data-controller="project-image-flipper"
+			data-action="click->project-image-flipper#flipImage"
+			hx-vals="<%= [
+																				project.image,
+																				project.imageMin,
+																			].to_json %>">
+		</a>
+		<div>
+			<a class="goToGithub" href="<%= project.sourceLink %>"></a>
+			<a class="goToLive" href="<%= project.liveLink %>"></a>
+		</div>
+	</div>
+</div>

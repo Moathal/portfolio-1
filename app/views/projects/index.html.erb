@@ -1,9 +1,7 @@
 <main>
   <nav>
     <ul>
-      <li hx-target="#projects"
-          hx-trigger="click" 
-          id="all" data-hx-vals="<%= @projects.to_json %>" data-controller="projects-nav" data-action="mouseup->projects-nav#switch" class="projectsNav selected">
+      <li  id="all" data-hx-vals="<%= @projects.to_json %>" data-controller="projects-nav" data-action="mouseup->projects-nav#switch" class="projectsNav selected">
           All projects
       </li>
       <li>Front-end</li>
@@ -11,5 +9,12 @@
       <li>Full-stack</li>
   </ul>
 </nav>
-  <section id='projects'></section>
+  <section id='projects'>
+     <div class="container">
+      <div class="cancelling-bg" hx-on:click="document.querySelectorAll('.active').forEach(function(element) {element.classList.remove('active');})"></div>
+        <% @projects.each do |project| %>
+          <%= render 'projects/project_card', project: project  %>
+        <% end %>
+      </div>
+  </section>
 </main>

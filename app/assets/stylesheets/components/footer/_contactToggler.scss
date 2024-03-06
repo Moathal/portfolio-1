@@ -2,10 +2,10 @@
   position: relative;
   width: 95px;
   height: 100px;
-  background: linear-gradient(35deg, rgba(255, 30, 173, 0.786), rgba(251, 139, 210, 0.844));
+  background: linear-gradient(35deg, rgba(255, 86, 34, 0.94), rgba(255, 86, 34, 0.635));
   border-radius: 50% 50% 60% 60% / 60% 60% 50% 50%;
   cursor: pointer;
-  animation: bounce 0.7s infinite alternate;
+  animation: bounce 0.5s infinite alternate;
   border: none;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
@@ -17,7 +17,7 @@
   height: 0;
   border-style: solid;
   border-width: 15px 10px 0;
-  border-color: #ff0095b3 transparent transparent;
+  border-color: rgb(255, 87, 34) transparent transparent;
   left: 50%;
   bottom: -15px;
   transform: translateX(-50%);

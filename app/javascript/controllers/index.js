@@ -7,5 +7,8 @@ import { application } from "./application"
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
 
+import ProjectImageFlipperController from "./project_image_flipper_controller"
+application.register("project-image-flipper", ProjectImageFlipperController)
+
 import ProjectsNavController from "./projects_nav_controller"
 application.register("projects-nav", ProjectsNavController)

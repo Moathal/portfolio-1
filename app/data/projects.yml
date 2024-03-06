@@ -2,46 +2,6 @@
 password: "wAhXsevE1Qk6uOyAqJah0cYtFoKlW1FWngFU84kISmE="
 
 projects: 
-  - id: 1
-    title: "SleepOver API"
-    image: "icons&imgs/WhatsAppImage2023-02-02at7.17.00PM.webp"
-    imageMin: "icons&imgs/WhatsAppImage2023-02-02at7.17.00PM.webp"
-    description: "Sleepover is an App developed using React for Front-End and Ruby on Rails for Back-End as two separated repositories by making API backend."
-    descriptionMin: "Sleepover is an App developed using React for Front-End and Ruby on Rails for Back-End as two separated repositories."
-    toolslist:
-      - "Ruby"
-      - "pgsql"
-      - "rails"
-    liveLink: "None"
-    sourceLink: "https://github.com/Moathal/hotel-room-reservation"
-    type: "back-end"
-
-  - id: 2
-    title: "Catalog of my things"
-    image: "icons&imgs/Screenshot2023-03-24144009.webp"
-    imageMin: "icons&imgs/Screenshot2023-03-24144009.webp"
-    description: "Catalog of my things is a project that uses console app to keep a record of different types of things you own: books, music albums, movies, and games. built using only Object oriented programming."
-    descriptionMin: "Catalog of my things is a project that uses console app to keep a record of different types of things you own: books, music albums, movies, and games. built using only Object oriented programming."
-    toolslist:
-      - "Ruby"
-      - "pgsql"
-    liveLink: "None"
-    sourceLink: "https://github.com/Moathal/Catalog-of-my-things"
-    type: "back-end"
-
-  - id: 3
-    title: "School Library"
-    image: "icons&imgs/Screenshot2023-03-24141702.webp"
-    imageMin: "icons&imgs/Screenshot2023-03-24141702.webp"
-    description: "Imagine that you are the librarian of OOP University, and you need a tool to record what books are in the library and who borrows them. In terminal, this app will allow you to Add new students or teachers. Add new books. Save records of who borrowed a given book and when."
-    descriptionMin: "Imagine that you are the librarian of OOP University, and you need a tool to record what books are in the library and who borrows them in terminal."
-    toolslist:
-      - "Ruby"
-      - "pgsql"
-    liveLink: "None"
-    sourceLink: "https://github.com/Moathal/School-library"
-    type: "back-end"
-
   - id: 4
     title: "Blog App"
     image: "icons&imgs/1678895682781.webp"
@@ -107,19 +67,19 @@ projects:
     sourceLink: "https://github.com/Moathal/Budget-app"
     type: "full-stack"
 
-  - id: 8
-    title: "Middle East Weather"
-    image: "icons&imgs/Screenshot2023-02-24215705.webp"
-    imageMin: "icons&imgs/mobileScreenshot2023-02-24215705.webp"
-    description: "It is a mobile webapp that shows the weather in time in some countries in middle east. Made using React redux."
-    descriptionMin: "This project lists some Middle eastern countries with their time weather."
+  - id: 12
+    title: "Fast Learn"
+    image: "icons&imgs/1660916560236.webp"
+    imageMin: "icons&imgs/mobilefastlearn.webp"
+    description: "This website is one of Microverse projects personalized by myself to make it a guidance for learning web development even if users have no experience. It is an all free website made to help students in finding the right skills required in jobs market of fullstack web development. The courses are available free on the web and our job is to SUBJECTIVELY choose the best. The courses chosen are The Odin Project and CS50 feel free to google them and get to build an opinion about them."
+    descriptionMin: "This website is one of Microverse projects personalized by myself to make it a guidance for learning web development even if users have no experience at all. All they need is dedication and time."
     toolslist:
       - "css"
+      - "html"
       - "bootstrap"
-      - "React"
-      - "Redux"
-    liveLink: "https://634e92fdfb2d5a612a53cefe--adorable-gumption-bc705f.netlify.app"
-    sourceLink: "https://github.com/Moathal/MiddleEastWeather"
+      - "JS"
+    liveLink: "https://Moathal.github.io/Fast-Learn"
+    sourceLink: "https://github.com/Moathal/Fast-Learn"
     type: "front-end"
 
   - id: 9
@@ -136,52 +96,6 @@ projects:
       - "Webpack"
     liveLink: "https://moathal.github.io/Dynasty-Entertainment/dist"
     sourceLink: "https://github.com/Moathal/Dynasty-Entertainment"
-    type: "front-end"
-
-  - id: 10
-    title: "Todo List"
-    image: "icons&imgs/Screenshot2023-02-24150747.webp"
-    imageMin: "icons&imgs/mobileScreenshot2023-02-24150747.webp"
-    description: "Simple to do list that adds removes and moves multiple tasks. It is made using webpack and vanilla JS and connected to storage API to store delete or update tasks."
-    descriptionMin: "This website is one of Microverse projects. It is an all free website made to help people in adding deleting or editing their daily tasks."
-    toolslist:
-      - "css"
-      - "html"
-      - "bootstrap"
-      - "JS"
-      - "Webpack"
-    liveLink: "https://moathal.github.io/Todo-List"
-    sourceLink: "https://github.com/Moathal/Todo-List"
-    type: "front-end"
-
-  - id: 11
-    title: "Awesome Books"
-    image: "icons&imgs/Screenshot2023-02-24161736.webp"
-    imageMin: "icons&imgs/mobileScreenshot2023-02-24161736.webp"
-    description: "This project lists some Awesome books and you can add you favorite to it. It is a single page application. Its also consist of a clock implemented without a library."
-    descriptionMin: "This project lists some Awesome books and you can add you favorite to it. It is a single page application."
-    toolslist:
-      - "css"
-      - "html"
-      - "bootstrap"
-      - "JS"
-    liveLink: "https://moathal.github.io/Awesome-books/"
-    sourceLink: "https://github.com/Moathal/Awesome-books"
-    type: "front-end"
-
-  - id: 12
-    title: "Fast Learn"
-    image: "icons&imgs/1660916560236.webp"
-    imageMin: "icons&imgs/mobilefastlearn.webp"
-    description: "This website is one of Microverse projects personalized by myself to make it a guidance for learning web development even if users have no experience. It is an all free website made to help students in finding the right skills required in jobs market of fullstack web development. The courses are available free on the web and our job is to SUBJECTIVELY choose the best. The courses chosen are The Odin Project and CS50 feel free to google them and get to build an opinion about them."
-    descriptionMin: "This website is one of Microverse projects personalized by myself to make it a guidance for learning web development even if users have no experience at all. All they need is dedication and time."
-    toolslist:
-      - "css"
-      - "html"
-      - "bootstrap"
-      - "JS"
-    liveLink: "https://Moathal.github.io/Fast-Learn"
-    sourceLink: "https://github.com/Moathal/Fast-Learn"
     type: "front-end"
 
   - id: 13
@@ -211,3 +125,89 @@ projects:
     liveLink: "https://moathal.github.io/itch-a-scetch"
     sourceLink: "https://github.com/Moathal/itch-a-scetch"
     type: "front-end"
+
+  - id: 11
+    title: "Awesome Books"
+    image: "icons&imgs/Screenshot2023-02-24161736.webp"
+    imageMin: "icons&imgs/mobileScreenshot2023-02-24161736.webp"
+    description: "This project lists some Awesome books and you can add you favorite to it. It is a single page application. Its also consist of a clock implemented without a library."
+    descriptionMin: "This project lists some Awesome books and you can add you favorite to it. It is a single page application."
+    toolslist:
+      - "css"
+      - "html"
+      - "bootstrap"
+      - "JS"
+    liveLink: "https://moathal.github.io/Awesome-books/"
+    sourceLink: "https://github.com/Moathal/Awesome-books"
+    type: "front-end"
+
+  - id: 10
+    title: "Todo List"
+    image: "icons&imgs/Screenshot2023-02-24150747.webp"
+    imageMin: "icons&imgs/mobileScreenshot2023-02-24150747.webp"
+    description: "Simple to do list that adds removes and moves multiple tasks. It is made using webpack and vanilla JS and connected to storage API to store delete or update tasks."
+    descriptionMin: "This website is one of Microverse projects. It is an all free website made to help people in adding deleting or editing their daily tasks."
+    toolslist:
+      - "css"
+      - "html"
+      - "bootstrap"
+      - "JS"
+      - "Webpack"
+    liveLink: "https://moathal.github.io/Todo-List"
+    sourceLink: "https://github.com/Moathal/Todo-List"
+    type: "front-end"
+
+  - id: 8
+    title: "Middle East Weather"
+    image: "icons&imgs/Screenshot2023-02-24215705.webp"
+    imageMin: "icons&imgs/mobileScreenshot2023-02-24215705.webp"
+    description: "It is a mobile webapp that shows the weather in time in some countries in middle east. Made using React redux."
+    descriptionMin: "This project lists some Middle eastern countries with their time weather."
+    toolslist:
+      - "css"
+      - "bootstrap"
+      - "React"
+      - "Redux"
+    liveLink: "https://634e92fdfb2d5a612a53cefe--adorable-gumption-bc705f.netlify.app"
+    sourceLink: "https://github.com/Moathal/MiddleEastWeather"
+    type: "front-end"
+
+  - id: 1
+    title: "SleepOver API"
+    image: "icons&imgs/WhatsAppImage2023-02-02at7.17.00PM.webp"
+    imageMin: "icons&imgs/WhatsAppImage2023-02-02at7.17.00PM.webp"
+    description: "Sleepover is an App developed using React for Front-End and Ruby on Rails for Back-End as two separated repositories by making API backend."
+    descriptionMin: "Sleepover is an App developed using React for Front-End and Ruby on Rails for Back-End as two separated repositories."
+    toolslist:
+      - "Ruby"
+      - "pgsql"
+      - "rails"
+    liveLink: "None"
+    sourceLink: "https://github.com/Moathal/hotel-room-reservation"
+    type: "back-end"
+
+  - id: 2
+    title: "Catalog of my things"
+    image: "icons&imgs/Screenshot2023-03-24144009.webp"
+    imageMin: "icons&imgs/Screenshot2023-03-24144009.webp"
+    description: "Catalog of my things is a project that uses console app to keep a record of different types of things you own: books, music albums, movies, and games. built using only Object oriented programming."
+    descriptionMin: "Catalog of my things is a project that uses console app to keep a record of different types of things you own: books, music albums, movies, and games. built using only Object oriented programming."
+    toolslist:
+      - "Ruby"
+      - "pgsql"
+    liveLink: "None"
+    sourceLink: "https://github.com/Moathal/Catalog-of-my-things"
+    type: "back-end"
+
+  - id: 3
+    title: "School Library"
+    image: "icons&imgs/Screenshot2023-03-24141702.webp"
+    imageMin: "icons&imgs/Screenshot2023-03-24141702.webp"
+    description: "Imagine that you are the librarian of OOP University, and you need a tool to record what books are in the library and who borrows them. In terminal, this app will allow you to Add new students or teachers. Add new books. Save records of who borrowed a given book and when."
+    descriptionMin: "Imagine that you are the librarian of OOP University, and you need a tool to record what books are in the library and who borrows them in terminal."
+    toolslist:
+      - "Ruby"
+      - "pgsql"
+    liveLink: "None"
+    sourceLink: "https://github.com/Moathal/School-library"
+    type: "back-end"

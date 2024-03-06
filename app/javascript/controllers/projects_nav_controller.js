@@ -20,10 +20,13 @@ export default class extends Controller {
     let newtype = nav_bttn.id;
     let sect = document.querySelector('#projects');
     let projects = JSON.parse(nav_bttn.getAttribute('data-hx-vals'));
-    console.log('Hi this is your object:', projects);
-    sect.innerHTML = `<div class="container"><div class="cancelling-bg"></div>
-      ${this.projectsList(projects)}
-    </div>`;
+    sect.innerHTML = `<div class="container">
+                        <div class="cancelling-bg" hx-on:click="document.querySelectorAll('.active').forEach(function(element) {
+                           element.classList.remove('active');
+                          })">
+                        </div>
+                        ${this.projectsList(projects)}
+                      </div>`;
       htmx.process(sect);
   }
 
@@ -32,11 +35,7 @@ export default class extends Controller {
       const card = document.createElement("div");
 			card.id = `card-${project.id}`;
 			card.className = "card";
-			card.setAttribute(
-				"hx-on:click",
-				`htmx.toggleClass('#card-${project.id}', 'active'); 
-        htmx.toggleClass('.cancelling-bg', 'active')`
-			);
+			card.setAttribute("hx-on:click",`htmx.toggleClass('#card-${project.id}', 'active'); htmx.toggleClass('.cancelling-bg', 'active')`);
       card.innerHTML = this.cardElements(project);
 			
       return card.outerHTML;
@@ -49,26 +48,29 @@ export default class extends Controller {
       <div class="card__head"><h4>${project.title}</h4></div>
       <div class="projectSpec">
       <ul class="tech-stack">${this.techStackList(project)}</ul>
-        <img class="ProjectIMG" src="${project.image}">
+        <img id="img-${project.id}" class="ProjectIMG" src="${project.image}">
         <div class="description">${project.description}</div>
       </div>
       <div class="project-actions">
+        <a id="cardFlip${project.id}" class="projectViewToggler" 
+                                      data-controller="project-image-flipper"
+                                      data-action="click->project-image-flipper#flipImage"
+                                      hx-vals=${JSON.stringify([
+																				project.image,
+																				project.imageMin,
+																			])}>
+        </a>
         <div>
-        <a></a>
-        <a><img class="viewToggler" src="icons&imgs/ProjectMobileView.svg"><a>
-        </div>
-        <div>
-          <a>2</a>
-          <a>3</a>
+          <a class="goToGithub" href="${project.sourceLink}"></a>
+          <a class="goToLive" href="${project.liveLink}"></a>
         </div>
       </div>`;
   }
   
   techStackList = (project) => {
     const tecklist = project.toolslist
-			.map((tool) => `<li><img src="icons&imgs/${tool}.webp"></img></li>`)
+			.map((tool) => `<li><img src="icons&imgs/${tool}.webp" alt"${tool}"></li>`)
 			.join("");
-    console.log('toolslist:', tecklist);
     return tecklist;
   }
 }
